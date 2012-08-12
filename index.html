@@ -31,24 +31,23 @@ background-color:red;
 </style>
 </head>
 <body>
-<canvas id="canvas" width="400" height="300"></canvas>
 <script>
 function example(){
     var stringMat = 
-    	"3  1  0  0  0  0  0  0\n"+
-    	"0  3  3  3  0  0  0  0\n"+
-    	"0  3  0  0  0  3  0  0\n"+
-    	"0  0  0  3  3  0  0  0\n"+
-    	"0  3  3  0  0  0  0  0\n"+
-    	"0  3  0  0  3  0  0  0\n"+
-    	"0  3  0  0  3  3  0  0\n"+
-    	"0  0  0  2  0  0  0  0"
+    	"3  1  0  0  0  0  0  0  0\n"+
+    	"0  3  3  3  0  0  0  0  0\n"+
+    	"0  3  0  0  0  3  3  3  0\n"+
+    	"0  0  0  3  3  0  0  0  0\n"+
+    	"0  3  3  0  0  0  0  0  0\n"+
+    	"0  3  0  0  3  0  0  0  0\n"+
+    	"0  3  0  0  3  3  0  0  0\n"+
+    	"0  0  0  2  0  0  0  0  0"
     ;
     var inputMap = document.getElementById("inputMap");
     inputMap.value = stringMat;
 }
 function go(){
-    console.log("go");
+    //console.log("go");
     var stringMat1 = document.getElementById("inputMap").value;
     var astar = new Astar();
     astar.solve(stringMat1);
